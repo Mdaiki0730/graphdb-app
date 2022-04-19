@@ -1,0 +1,8 @@
+# env file
+.env
+
+# tmp directory
+tmp
+
+# graphdb volumes
+volumes

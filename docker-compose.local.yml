@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  graphdb-app:
+    container_name: graphdb-app-container
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    command: "air -c /app/go/base/cmd/.air.toml"
+    image: graphdb-app
+    tty: true
+    volumes:
+      - .:/app/go/base:rw
+  neo4j:
+    image: neo4j
+    restart: always
+    ports:
+      - 7474:7474
+      - 7687:7687
+    volumes:
+      - ./volumes/neo4j/data:/data
