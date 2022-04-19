@@ -16,4 +16,4 @@ docker-build:
 
 .PHONY: watch-log
 watch-log:
-	@docker-compose -f docker-compose.local.yml logs -f graphdb
+	@docker-compose -f docker-compose.local.yml logs -f graphdb-app
