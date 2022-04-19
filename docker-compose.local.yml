@@ -12,7 +12,7 @@ services:
     volumes:
       - .:/app/go/base:rw
   neo4j:
-    image: neo4j
+    image: neo4j:4.4.2
     restart: always
     ports:
       - 7474:7474
